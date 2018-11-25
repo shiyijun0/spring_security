@@ -11,12 +11,15 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.scheduling.annotation.EnableScheduling;
-
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 
 @SpringBootApplication
 @EnableCaching
 @EnableScheduling
+@RestController  //docker部署
 public class BootApplication implements CommandLineRunner {
 
     @Autowired
@@ -33,7 +36,11 @@ public class BootApplication implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication.run(BootApplication.class, args);
     }
-
+//docker 部署
+    @RequestMapping("/")
+    public String home(){
+        return "Hello Docker!!";
+    }
 
     @Override
     public void run(String... args) throws Exception {

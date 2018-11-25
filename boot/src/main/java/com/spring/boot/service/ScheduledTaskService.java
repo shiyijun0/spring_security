@@ -17,7 +17,7 @@ public class ScheduledTaskService {
     Job importJob;
     public JobParameters jobParameters;
 
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(fixedRate = 2000)
     public void execute() throws Exception{
         String path = "people"+".csv";
         jobParameters = new JobParametersBuilder()

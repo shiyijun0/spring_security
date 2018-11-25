@@ -10,7 +10,7 @@ public class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Size(max=4,min=2) //1
+	@Size(max=10,min=1) //1
 	private String name;
 	
 	private int age;
