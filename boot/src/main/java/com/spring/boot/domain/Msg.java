@@ -11,6 +11,8 @@ public class Msg {
 		this.content = content;
 		this.etraInfo = etraInfo;
 	}
+
+
 	public String getTitle() {
 		return title;
 	}

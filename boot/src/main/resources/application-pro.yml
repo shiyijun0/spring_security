@@ -1,5 +1,8 @@
 spring:
   activemq:
-    broker-url: tcp:39.105.169.182:8085
+    broker-url: tcp://39.105.169.182:8086
     user: admin
     password: admin
+  rabbitmq:
+    host: 39.105.169.182
+    
